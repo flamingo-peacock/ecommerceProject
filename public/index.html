@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="meanApp">
+<html lang="en" ng-app="ecommerceApp">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Wireless security camera using Tessel hardware">
-        <meta name="author" content="Philipp Schulte">
-        <title>MEAN Stack</title>
+        <meta name="description" content="practice e-commerce site">
+        <meta name="author" content="Selena Rakowski">
+        <title>e-commerce</title>
         <!-- Bootstrap Core CSS -->
         <link href="./libs/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+        <link href="./styles.css" rel="stylesheet">
     </head>
     <body>
 
         <!-- Routing -->
-        <ng-view></ng-view>
+        <ui-view></ui-view>
 
         <!-- jQuery Library -->
         <script src="./libs/jquery/dist/jquery.js"></script>
@@ -21,8 +22,8 @@
         <script src="./libs/bootstrap/dist/js/bootstrap.js"></script>
         <!-- Angular Core Library -->
         <script src="./libs/angular/angular.js"></script>
-        <!-- Angular Route Library -->
-        <script src="./libs/angular-route/angular-route.js"></script>
+        <!-- Ui router Library -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
         <!-- Angular Module -->
         <script src="./js/app.js"></script>
         <!-- Angular Controller -->
@@ -30,9 +31,11 @@
         <script src="./js/controllers/registerCtrl.js"></script>
         <script src="./js/controllers/loginCtrl.js"></script>
         <script src="./js/controllers/profileCtrl.js"></script>
+        <script src="./js/controllers/productsCtrl.js"></script>
         <!-- Angular Services -->
         <script src="./js/services/authService.js"></script>
         <script src="./js/services/profile.js"></script>
+        <script src="./js/services/products.js"></script>
         <!-- Angular Directives -->
         <script src="./js/directives/navigation/navigation.controller.js"></script>
         <script src="./js/directives/navigation/navigation.directive.js"></script>

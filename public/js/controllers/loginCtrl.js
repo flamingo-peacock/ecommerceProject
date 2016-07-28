@@ -1,7 +1,7 @@
 (function () {
 
   angular
-  .module('meanApp')
+  .module('ecommerceApp')
   .controller('loginCtrl', loginCtrl);
 
   loginCtrl.$inject = ['$location', 'authentication'];
@@ -17,7 +17,7 @@
       authentication
         .login(vm.credentials)
         .error(function(err){
-          alert(err);
+          console.log(err, "login failed");
         })
         .then(function(){
           $location.path('profile');

@@ -1,7 +1,7 @@
 (function() {
 
   angular
-    .module('meanApp')
+    .module('ecommerceApp')
     .controller('profileCtrl', profileCtrl);
 
   profileCtrl.$inject = ['$location', 'profile'];
@@ -12,6 +12,7 @@
 
     profile.getProfile()
       .success(function(data) {
+        console.log(data)
         vm.user = data;
       })
       .error(function(e) {

@@ -5,7 +5,7 @@ var express = require('express');
 var mongoose = require('mongoose');
 var passport = require('passport');
 
-// Passport middelware
+// Passport middleware
 require('./app/config/passport')(passport);
 
 // Configuration
@@ -17,11 +17,11 @@ var routesApi = require('./app/routes/api');
 // Express
 var app = express();
 
-// Middelware
-require('./app/middelware/main')(app);
+// Middleware
+require('./app/middleware/main')(app);
 app.use(passport.initialize());
 app.use('/api', routesApi);
-require('./app/middelware/error')(app);
+require('./app/middleware/error')(app);
 
 // Connection to database
 mongoose.connect(config.db.uri, function(err) {

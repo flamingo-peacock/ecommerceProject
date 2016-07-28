@@ -1,7 +1,7 @@
 (function () {
 
   angular
-    .module('meanApp')
+    .module('ecommerceApp')
     .directive('navigation', navigation);
 
   function navigation () {

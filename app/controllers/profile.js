@@ -12,6 +12,7 @@ function read(req, res) {
     User
       .findById(req.payload._id)
       .exec(function(err, user) {
+        console.log(user)
         res.status(200).json(user);
       });
   }

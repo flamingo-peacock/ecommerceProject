@@ -1,17 +1,17 @@
 'use strict';
 
 // Dependencies
-var secret = require('./jwt.config');
-var uri = require('./db.config');
+// var secret = require('./jwt.config');
+// var uri = require('./db.config');
 
 module.exports = {
   server: {
     port: process.env.PORT || 3000
   },
   jwt: {
-    secret: secret
+    secret: 'mySecret'
   },
   db: {
-    uri: uri
+    uri: 'mongodb://localhost/ecommerce'
   }
 };

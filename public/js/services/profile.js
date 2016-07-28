@@ -1,7 +1,7 @@
 (function() {
 
   angular
-    .module('meanApp')
+    .module('ecommerceApp')
     .service('profile', profile);
 
   profile.$inject = ['$http', 'authentication'];

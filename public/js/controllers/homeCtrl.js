@@ -1,7 +1,7 @@
 (function() {
 
   angular
-    .module('meanApp')
+    .module('ecommerceApp')
     .controller('homeCtrl', homeCtrl);
 
     function homeCtrl () {
