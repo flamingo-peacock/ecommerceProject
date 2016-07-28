@@ -37,6 +37,12 @@
         controller: 'productsCtrl',
         controllerAs: 'vm'
       })
+      .state('product-details', {
+        url: '/products/:id',
+        templateUrl: 'views/product-details.html',
+        controller: 'productsCtrl',
+        controllerAs: 'vm'
+      })
       
   }
 

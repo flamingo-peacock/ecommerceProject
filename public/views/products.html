@@ -1,0 +1,33 @@
+<navigation></navigation>
+
+<div class="container">
+  <div class="page-header">
+    <h1>Welcome to Selena's MEAN Stack Store</h1>
+  </div>
+
+
+<!--Repeats over products and displays it -->
+
+<div class="product-grid__item   grid__item one-half large--one-third" ng-repeat="product in vm.products">
+
+     <!--Product Image-->
+
+    <a class="product-grid__product" ui-sref="products({id: product.id})")>
+        <img class="product-grid__img" 
+        alt="" ng-src="{{product.imgUrl}}" sizes="(max-width: 960px) 33vw, (max-width: 769px) 50vw, 100vw"/>
+    </a>
+    
+
+    <!--Product Meta-->
+    <div class="product-grid__meta">
+        <!-- Tittle--> 
+        <h3 class="product-grid__name"><a ui-sref="products({id: '{{product.id}}'})">{{product.name}}</a></h3>
+        <!--Product Description-->
+        <h4 class="product-grid__sub">{{product.description}}</h4>
+
+        <!--Product Price-->
+        <div class="product-grid__price">${{product.price}}</div>
+    </div> 
+</div>
+
+</div>
