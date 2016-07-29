@@ -29,12 +29,11 @@ function read(req, res) {
 
 function readOne(req, res) {
   Product
-  .find(req.params.productId)
-  .exec(function(err, products) {
+  .findById(req.params.productId, function(err, product) {
     if (err) {
       res.status(500).send(err);
     } else {
-      res.json(products);
+      res.json(product);
     }
   });
 }

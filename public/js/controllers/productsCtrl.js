@@ -17,6 +17,7 @@
       }, function(error){
         vm.error = error.message;
       });
+
   }
 
 })();

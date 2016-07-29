@@ -40,7 +40,7 @@
       .state('product-details', {
         url: '/products/:id',
         templateUrl: 'views/product-details.html',
-        controller: 'productsCtrl',
+        controller: 'singleProductCtrl',
         controllerAs: 'vm'
       })
       

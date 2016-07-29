@@ -12,16 +12,16 @@
 
      <!--Product Image-->
 
-    <a class="product-grid__product" ui-sref="products({id: product.id})")>
-        <img class="product-grid__img" 
-        alt="" ng-src="{{product.imgUrl}}" sizes="(max-width: 960px) 33vw, (max-width: 769px) 50vw, 100vw"/>
+    <a class="product-grid__product" ui-sref="products({id: product.id})">
+    <!-- "products({id: product._id})" -->
+        <img class="product-grid__img" alt="" ng-src="{{product.imgUrl}}" sizes="(max-width: 960px) 33vw, (max-width: 769px) 50vw, 100vw"/>
     </a>
     
 
     <!--Product Meta-->
     <div class="product-grid__meta">
         <!-- Tittle--> 
-        <h3 class="product-grid__name"><a ui-sref="products({id: '{{product.id}}'})">{{product.name}}</a></h3>
+        <h3 class="product-grid__name"><a ui-sref="products({id: product.id})">{{product.name}}</a></h3>
         <!--Product Description-->
         <h4 class="product-grid__sub">{{product.description}}</h4>
 
