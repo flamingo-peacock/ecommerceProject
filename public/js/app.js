@@ -2,9 +2,7 @@
 
   angular.module('ecommerceApp', ['ui.router']);
 
-  function config ($stateProvider, $locationProvider, $urlRouterProvider) {
-    
-    //$urlRouterProvider.otherwise('/');
+  function config ($stateProvider, $urlRouterProvider) {
 
     $stateProvider
       .state('home', {
@@ -37,26 +35,43 @@
         controller: 'productsCtrl',
         controllerAs: 'vm'
       })
-      .state('product-details', {
+      .state('details', {
         url: '/products/:id',
         templateUrl: 'views/product-details.html',
         controller: 'singleProductCtrl',
         controllerAs: 'vm'
       })
+      .state('cart', {
+        url: '/cart',
+        templateUrl: './views/cart.html',
+        controller: 'cartCtrl',
+        controllerAs: 'vm'
+      })
+      .state('contact', {
+        url: '/contact',
+        templateUrl: './views/contact.html',
+        controller: 'contactCtrl',
+        controllerAs: 'vm'
+      });
+
+      $urlRouterProvider.otherwise('/');
       
   }
 
   function run($rootScope, $location, authentication) {
-    $rootScope.$on('$routeChangeStart', function(event, nextRoute, currentRoute) {
-      if ($location.path() === '/profile' && !authentication.isLoggedIn()) {
-        $location.path('/');
+    $rootScope.$on('$stateChangeStart', function(event, nextRoute, currentRoute) {
+      if ($location.path() === 'profile' && !authentication.isLoggedIn()) {
+        $location.path('home');
+      }
+      if ($location.path() === 'cart' && !authentication.isLoggedIn()) {
+        $location.path('login');
       }
     });
   }
 
   angular
     .module('ecommerceApp')
-    .config(['$stateProvider', '$locationProvider', config])
+    .config(['$stateProvider', '$urlRouterProvider', config])
     .run(['$rootScope', '$location', 'authentication', run]);
 
 })();

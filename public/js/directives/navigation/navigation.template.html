@@ -13,10 +13,14 @@
       <ul class="nav navbar-nav">
         <li><a ui-sref="home">Home</a></li>
         <li><a ui-sref="products">Products</a></li>
+        <li><a ui-sref="contact">Contact Us</a></li>
+
       </ul>
       <ul class="nav navbar-nav navbar-right">
+
         <li ng-hide="navvm.isLoggedIn"><a ui-sref="login">Login</a></li>
         <li ng-hide="navvm.isLoggedIn"><a ui-sref="register">Register</a></li>
+         <li ng-show="navvm.isLoggedIn"><a ui-sref="cart">Shopping Cart</a></li>
         <li ng-show="navvm.isLoggedIn" class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ navvm.currentUser.name }} <span class="caret"></span></a>
           <ul class="dropdown-menu">

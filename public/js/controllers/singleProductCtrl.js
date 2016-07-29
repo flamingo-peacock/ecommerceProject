@@ -16,6 +16,10 @@
     }, function (error) {
       vm.error = error.message;
     });
+
+    vm.addToCart = function(id){
+      
+    };
   }
 
 })();

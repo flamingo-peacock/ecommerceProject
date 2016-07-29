@@ -38,6 +38,15 @@
     <div class="navbar-header">*/
 
 .navbar-bg {
-    background-color:#910000
-    ;
+    background-color:#910000;
+    border:5px solid #910000;
+}
+
+.form-control{
+    width:90%;
+}
+
+.btn-danger{
+     background-color:#910000;
+     border:1px solid #910000;
 }
