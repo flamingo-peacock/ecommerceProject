@@ -1,0 +1,44 @@
+<navigation></navigation>
+
+<div class="container">
+<div class="page-header">
+    <h1>Welcome to Selena's MEAN Stack Store</h1>
+</div>
+
+<div >
+	<h3>Contact Us</h3>
+	<form ng-submit="submitAnswer(contactData)">
+
+	    <div class="form-group">
+		    <label for="contactType"> What can we help you with? </label><br>
+		    <select name="contatType" ng-model="contactData.contactType">
+		      <option value="website">Website</option>
+		      <option value="products">Products</option>
+		      <option value="other">Other</option>
+		    </select><br>
+		</div>    
+
+	    <div class="form-group">
+			<p>Name</p>
+			<input class="form-control" type="text" ng-model="contactData.name" placeholder="  Full Name" required>
+		</div>		
+
+		<div class="form-group">
+			<p>Phone</p>
+			<input class="form-control" type="text" ng-model="contactData.phone" placeholder="  phone" required>
+		</div>
+		<div class="form-group">
+			<p>E-mail</p>
+			<input class="form-control" type="text" ng-model="contactData.email" placeholder="  e-mail" required>
+		</div>
+
+		
+
+		<p>Please enter comments or concerns:</p>
+		<textarea class="box" rows="7" cols="200" ng-model="comment1" required></textarea>
+
+		<p><button class="btn btn-danger" type="submit">Submit</button></p>
+		
+	</form>
+</div>
+</div>

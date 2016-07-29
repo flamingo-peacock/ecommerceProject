@@ -5,7 +5,7 @@
     <h2>Register</h2>
   </div>
 
-  <p class="lead">Already a member? Please <a href="/#/login">log in</a> instead.</p>
+  <p class="lead">Already a member? Please <a ui-sref="login">log in</a> instead.</p>
 
   <form ng-submit="vm.onSubmit()">
     <div class="form-group">
@@ -20,6 +20,6 @@
       <label for="password">Password</label>
       <input type="password" class="form-control" placeholder="Password" ng-model="vm.credentials.password" required>
     </div>
-    <button type="submit" class="btn btn-info">Register</button>
+    <button type="submit" class="btn btn-danger">Register</button>
   </form>
 </div>
