@@ -1,0 +1,20 @@
+<navigation></navigation>
+
+<div class="product-grid__item  grid__item one-half large--one-third" >
+
+    <!--Product Image-->
+    <a class="product-grid__product">
+        <img class="product-grid__img"  sizes="(min-width: 960px) 33vw, (min-width: 769px) 50vw, 100vw" alt="" src="{{vm.singleProduct.imgUrl}}">
+    </a>
+
+    <!--Product Meta-->
+    <div class="product-grid__meta">
+        <!-- Tittle-->
+        <h3 class="product-grid__name"><a>{{vm.singleProduct.name}}</a></h3>
+        <!--Product Description-->
+        <h4 class="product-grid__sub">{{vm.singleProduct.description}}</h4>
+
+        <!--Product Price-->
+        <div class="product-grid__price">${{vm.singleProduct.price}}</div>
+    </div>
+</div>
