@@ -11,7 +11,8 @@
   cart.makeCart(authentication.currentUser().id)
   .then(function(response){
     vm.cart = response;
-    console.log(vm.cart)
+    console.log("cart", vm.cart);
+    console.log("cartID", cart.id )
   });
 
     

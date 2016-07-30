@@ -10,11 +10,6 @@
   	var getProducts = function () {
   		return $http.get('/api/products')
       .then(function(response) {
-        for(obj in response.data){
-        response.data[obj].id = response.data[obj]._id;
-}
-        console.log(response.data[obj].id);
-
 			    return response.data;
 			  }, function(error) {
 			    console.log(error);

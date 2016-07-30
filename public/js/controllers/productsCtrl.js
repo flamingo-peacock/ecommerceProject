@@ -4,7 +4,7 @@
     .module('ecommerceApp')
     .controller('productsCtrl', productsCtrl);
 
-  productsCtrl.$inject = ['$location', 'products', 'cart';
+  productsCtrl.$inject = ['$location', 'products', 'cart'];
   function productsCtrl($location, products) {
     var vm = this;
 
@@ -12,7 +12,6 @@
 
     products.getProducts()
     .then(function(data) {
-        console.log(data);
         vm.products = data;
       }, function(error){
         vm.error = error.message;

@@ -12,7 +12,7 @@
 
      <!--Product Image-->
 
-    <a class="product-grid__product" ui-sref="details({id: product.id})">
+    <a class="product-grid__product" ui-sref="details({id: product._id})">
     <!-- "products({id: product._id})" -->
         <img class="product-grid__img" alt="" ng-src="{{product.imgUrl}}" sizes="(max-width: 960px) 33vw, (max-width: 769px) 50vw, 100vw"/>
     </a>
@@ -21,13 +21,14 @@
     <!--Product Meta-->
     <div class="product-grid__meta">
         <!-- Tittle--> 
-        <h3 class="product-grid__name"><a ui-sref="details({id: product.id})">{{product.name}}</a></h3>
+        <h3 class="product-grid__name"><a ui-sref="details({id: product._id})">{{product.name}}</a></h3>
         <!--Product Description-->
         <h4 class="product-grid__sub">{{product.description}}</h4>
 
         <!--Product Price-->
         <div class="product-grid__price">${{product.price}}</div>
     </div> 
+    <button class="btn red btn-danger" ng-click="addItem(product._id)">Add to Cart</button>
 </div>
 
 </div>

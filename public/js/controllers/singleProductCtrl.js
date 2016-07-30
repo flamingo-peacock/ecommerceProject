@@ -17,8 +17,8 @@
       vm.error = error.message;
     });
 
-    vm.addItem = function(cartId, prodID){
-      cart.addItem(cartId, prodID)
+    vm.addItem = function(prodID){
+      cart.addItem(cart.id, prodID)
       .then(function(response){
         cart.getCart(response.user)
           . then(function(response){

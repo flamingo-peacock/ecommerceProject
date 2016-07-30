@@ -29,8 +29,9 @@
 /*# sourceMappingURL=screen.css.map */
 
 .product-grid__img{
-    max-height: 200px;
+    max-height: 210px;
     max-width: 300px;
+    border-bottom:10px solid #634a4a;
 }
 /*
 <nav class="navbar navbar-inverse navbar-static-top">
@@ -38,16 +39,29 @@
     <div class="navbar-header">*/
 
 .navbar-bg {
-    background-color:#910000;
-    border:5px solid #910000;
+    background-color:#891e1e;
+    height: 60px; 
+    border-bottom:10px solid #634a4a;
 }
 
 .form-control{
     width:90%;
 }
 
-.btn-danger{
-     background-color:#910000;
-     border:1px solid #910000;
+.red, .btn-danger, .btn, .btn:link, .btn:visited{
+     background:#A02626;
+     border:1px solid #A02626;
      border-radius: 0px;
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus{
+    background-color: #634a4a;
+}
+
+.bg-light-gray{
+    background-color: #A08383;
+}
+.grey, .btn:link, .btn:visited{
+    background: #634a4a;
+    border: 3px solid #634a4a;
 }

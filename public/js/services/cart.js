@@ -7,6 +7,8 @@
   cart.$inject = ['$http'];
   function cart ($http) {
 
+    var id ='';
+
   	var makeCart = function (userId) {
       console.log("userId ", userId)
       var user = {user: userId}
@@ -16,7 +18,7 @@
         url: '/api/cart',
         data: obj
       }).then(function(response) {
-        console.log("make",response.data);
+        cart.id = response.data._id;
         return response.data;
       }, function(error) {
         console.log(error)
@@ -73,7 +75,8 @@
       makeCart: makeCart,
       getCart: getCart,
       addItem: addItem,
-      removeItem: removeItem
+      removeItem: removeItem,
+      id: id
     };
   }
 
