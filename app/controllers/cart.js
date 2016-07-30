@@ -7,11 +7,18 @@ const products = require('../models/product');
 
 
 function create(req, res) {
-  const newCart = new Cart(req.body);
-  newCart.save((err, cart) => {
-    err ? res.status(500).send(err) : res.json(cart)
-  });
+    if(!Cart.find(req.body.userId)){
+      //document does not exists 
+      const newCart = new Cart(req.body);
+      newCart.save((err, cart) => {
+        err ? res.status(500).send(err) : res.json(cart)
+      });
+    }
+    else{
+      readOne(req, res)
+    }
 }
+
 
 function read(req, res) {
   Cart
@@ -23,8 +30,9 @@ function read(req, res) {
 }
 
 function readOne(req, res) {
+  console.log(req)
   Cart
-  .find(req.params.userId)
+  .findOne(req.params.userId)
   .populate('products')
   .exec((err, cart) => {
     err ? res.status(500).send(err) : res.json(cart)

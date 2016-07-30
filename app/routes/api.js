@@ -41,7 +41,7 @@ router.post('/contact', contactCtrl.create);
 //cart
 router.post('/cart', cartCtrl.create);
 router.get('/cart', cartCtrl.read);
-router.get('/cart/:CartId', cartCtrl.readOne);
+router.get('/cart/:userId', cartCtrl.readOne);
 router.put('/cart/:CartId', cartCtrl.update);
 router.put('/cart/:CartId/:productId', cartCtrl.destroyOne);
 router.delete('/cart/:CartId', cartCtrl.delete);
