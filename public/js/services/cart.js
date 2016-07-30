@@ -11,7 +11,7 @@
       console.log("userId ", userId)
       var user = {user: userId}
       var obj = JSON.stringify(user);
-      $http({
+      return $http({
         method: 'POST',
         url: '/api/cart',
         data: obj
@@ -26,7 +26,7 @@
 
     var getCart = function(userId){
       var concatURL = '/api/cart/' + userId;
-      $http({
+      return $http({
         method: 'GET',
         url: concatURL
       }).then(function(response) {
@@ -43,7 +43,7 @@
       var concatURL = '/api/cart/' + cartId;
       var prod = {productId: productId}
       var obj = JSON.stringify(prod);
-      $http({
+      return $http({
         method: 'PUT',
         url: concatURL,
         data: obj

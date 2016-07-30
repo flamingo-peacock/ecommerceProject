@@ -4,8 +4,8 @@
     .module('ecommerceApp')
     .controller('singleProductCtrl', singleProductCtrl);
 
-  singleProductCtrl.$inject = ['$location', 'products', '$stateParams'];
-  function singleProductCtrl($location, products, $stateParams) {
+  singleProductCtrl.$inject = ['$location', 'products', 'cart', '$stateParams'];
+  function singleProductCtrl($location, products, cart, $stateParams) {
     var vm = this;
 
     vm.singleProduct = {};
@@ -17,8 +17,14 @@
       vm.error = error.message;
     });
 
-    vm.addToCart = function(id){
-      
+    vm.addItem = function(cartId, prodID){
+      cart.addItem(cartId, prodID)
+      .then(function(response){
+        cart.getCart(response.user)
+          . then(function(response){
+            vm.cart = response;
+          });
+      });
     };
   }
 
