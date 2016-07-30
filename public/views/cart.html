@@ -2,26 +2,21 @@
 
 <div class="container">
 
-<div class="product-grid__item   grid__item one-half large--one-third" ng-repeat="product in vm.cart.products">
 
-     <!--Product Image-->
+<div class="panel panel-danger" ng-repeat="product in vm.cart.products">
 
-    <a class="product-grid__product" ui-sref="details({id: product.id})">
-    <!-- "products({id: product._id})" -->
-        <img class="product-grid__img" alt="" ng-src="{{product.imgUrl}}" sizes="(max-width: 960px) 33vw, (max-width: 769px) 50vw, 100vw"/>
-    </a>
-    
+     
+     <div class="panel-heading">
+        <h3 class="panel-title pull-left">{{product.name}} -- ${{product.price}}</h3>
+          <button class="pull-right close" ng-click="deleteQuote($index)">x</button>
+          <div class="clearfix"></div>
+        </div>
 
-    <!--Product Meta-->
-    <div class="product-grid__meta">
-        <!-- Tittle--> 
-        <h3 class="product-grid__name"><a ui-sref="details({id: product.id})">{{product.name}}</a></h3>
-        <!--Product Description-->
-        <h4 class="product-grid__sub">{{product.description}}</h4>
 
-        <!--Product Price-->
-        <div class="product-grid__price">${{product.price}}</div>
-    </div> 
+        <div class="panel-body"><img class="thumbnail" alt="" ng-src="{{product.imgUrl}}" />
+        </div>
+      </div>
+
 </div>
 
 
