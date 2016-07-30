@@ -47,6 +47,12 @@
         controller: 'cartCtrl',
         controllerAs: 'vm'
       })
+      .state('thanks', {
+        url: '/thanks',
+        templateUrl: './views/thanks.html',
+        controller: 'contactCtrl',
+        controllerAs: 'vm'
+      })
       .state('contact', {
         url: '/contact',
         templateUrl: './views/contact.html',

@@ -49,4 +49,5 @@
 .btn-danger{
      background-color:#910000;
      border:1px solid #910000;
+     border-radius: 0px;
 }

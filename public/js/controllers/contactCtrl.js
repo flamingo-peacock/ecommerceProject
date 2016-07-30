@@ -4,22 +4,18 @@
     .module('ecommerceApp')
     .controller('contactCtrl', contactCtrl);
 
-  contactCtrl.$inject = ['$location', 'products', '$stateParams'];
-  function contactCtrl($location, products, $stateParams) {
+  contactCtrl.$inject = ['$location', 'contact'];
+  function contactCtrl($location, contact) {
     var vm = this;
 
-    vm.contact = {};
+    vm.contact = function(obj){
+      console.log(obj);
+      contact.sendContact(obj);
 
-    // products.getcontact($stateParams.id).then(function (response) {
-    //   vm.contact = response;
-    //   return (vm.products);
-    // }, function (error) {
-    //   vm.error = error.message;
-    // });
-
-    vm.addToCart = function(id){
-      
+      $location.path('thanks');
     };
   }
+
+
 
 })();
